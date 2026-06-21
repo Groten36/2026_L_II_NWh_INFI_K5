@@ -22,7 +22,8 @@ jobs:
             command: make run
             background: true
 
-      - run: make deps 
+      - run: make deps
+      - run: make lint 
 
       - run: make test       
 
