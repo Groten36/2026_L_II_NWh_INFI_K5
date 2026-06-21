@@ -1,4 +1,5 @@
-TAG=$(USERNAME)/hello-world-printer-k7-2026
+USERNAME=Groten36
+TAG=$(USERNAME)/hello-world-printer-k5-2026
 
 deps:
 	pip install -r requirements.txt
@@ -25,7 +26,7 @@ docker_run: docker_build
 	  -d hello-world-printer
 
 docker_push: docker_build
-	@docker login --username $(USERNAME) --password $${DOCKER_PASSWORD}
-	docker tag hello-world-printer $(TAG)
-	docker push $(TAG)
-	docker logout
+	@docker login --username $(USERNAME) --password $${DOCKER_PASSWORD}; \
+	docker tag hello-world-printer $(TAG); \
+	docker push $(TAG); \
+	docker logout;
