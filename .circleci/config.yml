@@ -15,6 +15,10 @@ jobs:
     steps: 
 
       - checkout 
+      - run:
+        name: Start Web Server
+        command: python app.py # Or npm start, etc.
+        background: true
 
       - run: make deps 
 
