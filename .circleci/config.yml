@@ -20,7 +20,7 @@ jobs:
       - run: pip install -r test_requirements.txt 
       - run: 
             command: make run
-            backgournd: true
+            background: true
 
       - run: make deps 
 
